@@ -11,8 +11,8 @@ const isStagingHost =
 const DEFAULT_API_BASE_URL = isLocalHost
   ? "http://127.0.0.1:8000"
   : isStagingHost
-    ? "https://umitdev-flight-backend-staging.onrender.com"
-    : "https://umitdev-flight-backend.onrender.com";
+    ? "https://flight-app-staging-production.up.railway.app"
+    : "https://flight-app-prod-production.up.railway.app";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || DEFAULT_API_BASE_URL;
 
