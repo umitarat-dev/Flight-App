@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+:root {
+  --bg: #f6f4ef;
+  --bg-accent: #f0e8d6;
+  --surface: #fffdf8;
+  --surface-soft: #fff8e8;
+  --ink: #1f2328;
+  --muted: #5f646d;
+  --line: #e6d9bf;
+  --brand: #14532d;
+  --brand-strong: #0f3d22;
+  --danger: #9f1239;
+  --shadow: 0 18px 44px rgba(30, 41, 59, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  font-family: "Source Sans 3", sans-serif;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(168, 225, 195, 0.34), transparent 45%),
+    radial-gradient(circle at 12% 85%, rgba(244, 205, 120, 0.28), transparent 40%),
+    linear-gradient(180deg, var(--bg-accent) 0%, var(--bg) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  background: rgba(23, 27, 33, 0.9);
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 0.9rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #edfef3;
+  background: linear-gradient(135deg, #1f7a45, #0f3d22);
+  box-shadow: 0 8px 22px rgba(10, 48, 26, 0.42);
+}
+
+.brand-title {
+  margin: 0;
+  text-align: center;
+  color: #f6f9f7;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  letter-spacing: 0.02em;
+}
+
+.auth-menu {
+  position: relative;
+}
+
+.auth-toggle,
+.secondary-btn,
+.reservation-form button,
+.auth-form button {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.auth-toggle {
+  border: 1px solid rgba(216, 234, 223, 0.35);
+  color: #f2fff6;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.95rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: transform 0.16s ease, background 0.16s ease;
+}
+
+.auth-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.auth-dropdown {
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  min-width: 11.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.95rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: drop-in 180ms ease-out;
+}
+
+.auth-dropdown a,
+.auth-dropdown button {
+  text-decoration: none;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  text-align: left;
+  font-size: 0.97rem;
+  padding: 0.72rem 0.8rem;
+  cursor: pointer;
+}
+
+.auth-dropdown a:hover,
+.auth-dropdown button:hover {
+  background: var(--surface-soft);
+}
+
+.page {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: clamp(1.1rem, 2.5vw, 2.4rem) 1rem 2.2rem;
+}
+
+.page-header {
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow: 0 6px 24px rgba(58, 66, 82, 0.08);
+}
+
+.page-header h1,
+.page-header h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.015em;
+  font-size: clamp(1.35rem, 2.7vw, 2rem);
+}
+
+.page-header p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.table-wrap {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  overflow-x: auto;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.86rem 0.95rem;
+  border-bottom: 1px solid #f2ead9;
+  vertical-align: top;
+}
+
+th {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.01em;
+  color: #344350;
+  background: linear-gradient(180deg, #fff8e8, #f6eedf);
+}
+
+tbody tr:hover {
+  background: #fffcf4;
+}
+
+.link-btn {
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.reserve-inline-btn {
+  margin-left: 0.6rem;
+}
+
+.detail-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.detail-card h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.reservation-form {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #decaa5;
+}
+
+.reservation-form h4 {
+  margin: 0 0 0.75rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.passenger-top,
+.passenger-card-header,
+.form-actions,
+.actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.passenger-top,
+.passenger-card-header {
+  justify-content: space-between;
+}
+
+.passenger-count,
+.profile-grid p {
+  margin: 0;
+}
+
+.passenger-card {
+  border: 1px solid #eddcb6;
+  border-radius: 0.9rem;
+  padding: 0.82rem;
+  margin-bottom: 0.8rem;
+  background: #fff8ea;
+}
+
+.passenger-card-header h5 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.78rem;
+}
+
+.reservation-form label,
+.auth-form label {
+  display: grid;
+  gap: 0.34rem;
+  font-weight: 600;
+}
+
+.reservation-form input,
+.auth-form input {
+  width: 100%;
+  border: 1px solid #cfbea0;
+  border-radius: 0.7rem;
+  padding: 0.58rem 0.68rem;
+  color: var(--ink);
+  background: #fffcf6;
+}
+
+.reservation-form input:focus,
+.auth-form input:focus {
+  outline: 2px solid rgba(33, 115, 69, 0.2);
+  border-color: #32895b;
+}
+
+.reservation-form button,
+.auth-form button {
+  margin-top: 0.25rem;
+  border: 0;
+  border-radius: 0.72rem;
+  padding: 0.64rem 0.9rem;
+  font-weight: 700;
+  color: #f7fff9;
+  background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+  cursor: pointer;
+  transition: transform 0.16s ease, filter 0.16s ease;
+}
+
+.reservation-form button:hover,
+.auth-form button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.reservation-form button:disabled,
+.auth-form button:disabled {
+  opacity: 0.68;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  border: 1px solid #cfbea0;
+  border-radius: 0.68rem;
+  padding: 0.44rem 0.74rem;
+  font-weight: 600;
+  color: #2d3748;
+  background: #fffbf2;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #fff3d6;
+}
+
+.danger-btn {
+  border-color: #e8b6c4;
+  color: var(--danger);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 23, 34, 0.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.4rem 1rem;
+  z-index: 25;
+}
+
+.modal-card {
+  width: min(960px, 100%);
+  max-height: calc(100vh - 4.7rem);
+  overflow-y: auto;
+  background: var(--surface);
+  border-radius: 1.05rem;
+  border: 1px solid var(--line);
+  box-shadow: 0 28px 60px rgba(20, 29, 40, 0.35);
+  padding: 1rem;
+  animation: rise-in 180ms ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.02rem;
+}
+
+.auth-page {
+  max-width: 560px;
+}
+
+.profile-page {
+  max-width: 930px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.62rem 1rem;
+}
+
+.auth-form {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.95rem;
+  background: #fff9ec;
+}
+
+.error,
+.success {
+  padding: 0.72rem 0.9rem;
+  border-radius: 0.72rem;
+  border: 1px solid;
+}
+
+.error {
+  color: #7f1734;
+  background: #ffe9ef;
+  border-color: #f5b4c6;
+}
+
+.success {
+  color: #0f5132;
+  background: #dbf9ea;
+  border-color: #99e4be;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.skeleton-wrap {
+  padding: 1rem;
+}
+
+.skeleton-line {
+  height: 14px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, #f7edd6 20%, #efe2c4 50%, #f7edd6 80%);
+  background-size: 220% 100%;
+  animation: shimmer 1.2s infinite linear;
+}
+
+.skeleton-line.short {
+  width: 62%;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 220% 0;
+  }
+  to {
+    background-position: -220% 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "logo . auth"
+      "title title title";
+  }
+
+  .brand {
+    grid-area: logo;
+  }
+
+  .brand-title {
+    grid-area: title;
+    text-align: left;
+    font-size: 1.02rem;
+  }
+
+  .auth-menu {
+    grid-area: auth;
+    justify-self: end;
+  }
+
+  .page {
+    padding-top: 1rem;
+  }
+
+  .form-grid,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-cell {
+    flex-wrap: wrap;
+  }
+}

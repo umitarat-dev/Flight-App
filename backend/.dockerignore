@@ -1,0 +1,13 @@
+.git
+.gitignore
+env311
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+db.sqlite3
+debug.log
+frontend/node_modules
+frontend/dist
+postgres_data
