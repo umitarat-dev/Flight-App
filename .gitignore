@@ -11,6 +11,7 @@
 *.njsproj
 *.sln
 *.sw?
+**/.env
 
 # ====================================================================
 # BACKEND (Django)
@@ -41,6 +42,12 @@ frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
 frontend/.local
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
 
 # ====================================================================
 # ENV & SECRETS (Safety First!)
