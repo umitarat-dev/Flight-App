@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/badge/Frontend-React%20(Vite)-61DAFB?style=flat&logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/Database-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/Container-Docker-2496ED?style=flat&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Hosting-Render-46E3B7?style=flat&logo=render&logoColor=black" />
+  <img src="https://img.shields.io/badge/Hosting-Railway-591DF1?style=flat&logo=railway&logoColor=white" />
   <img src="https://img.shields.io/badge/DB%20Hosting-Neon-00E599?style=flat&logo=postgresql&logoColor=black" />
 </p>
 
@@ -15,18 +15,21 @@ Production-style flight reservation app with token auth, role-based access, staf
 
 <div align="center">
   <h3>
-    <a href="https://umitdev-flight-frontend.onrender.com">🖥️ Live Frontend</a>
+    <a href="https://flight-app-umit.vercel.app/">🖥️ Live Frontend</a>
     |
-    <a href="https://umitdev-flight-backend.onrender.com/swagger/">📘 Swagger</a>
+    <a href="https://flight-app-prod-production.up.railway.app/swagger/">📘 Swagger</a>
     |
-    <a href="https://umitdev-flight-backend.onrender.com/redoc/">📗 Redoc</a>
+    <a href="https://flight-app-prod-production.up.railway.app/redoc/">📗 Redoc</a>
   </h3>
 </div>
 
 <!-- GIF PLACEHOLDER: Put your gif file in repo root and update src path -->
 <div align="center">
-  <img src="./flight-app-demo.gif" alt="flight-app-demo" width="900"/>
+  <a href="https://flight-app-umit.vercel.app/">
+    <img src="assets/flight-app.gif" alt="flight-app-demo" width="900"/>
+  </a>
 </div>
+
 
 ## 📚 Navigation
 
@@ -70,8 +73,8 @@ This project demonstrates a complete backend+frontend workflow:
 - `frontend/` -> React (Vite) UI
 - `docker-compose.yml` -> local fullstack (`backend + frontend + postgres + redis`)
 - Hosting:
-  - Backend: Render Web Service
-  - Frontend: Render Web Service
+  - Backend: Railway Web Service
+  - Frontend: Vercel Web Service
   - DB: Neon PostgreSQL
 
 ## 🛠️ Tech Stack
@@ -83,7 +86,7 @@ This project demonstrates a complete backend+frontend workflow:
 - PostgreSQL
 - Docker / Docker Compose
 - Gunicorn + WhiteNoise
-- Render + Neon
+- Railway + Neon
 
 ## ⚡ Local Setup
 
@@ -124,14 +127,14 @@ Note: If local PostgreSQL already uses `5432`, compose uses host `5433`.
 Current mapping:
 
 - **Production**
-  - Frontend: `https://umitdev-flight-frontend.onrender.com`
-  - Backend: `https://umitdev-flight-backend.onrender.com`
+  - Frontend: `https://flight-app-umit.vercel.app/`
+  - Backend: `https://flight-app-prod-production.up.railway.app/`
   - Neon branch: `production`
   - DB: `flight_app`
 
 - **Staging**
-  - Frontend: `https://umitdev-flight-frontend-staging.onrender.com`
-  - Backend: `https://umitdev-flight-backend-staging.onrender.com`
+  - Frontend: `https://flight-app-staging-umit.vercel.app/`
+  - Backend: `https://flight-app-staging-production.up.railway.app/`
   - Neon branch: `staging`
   - DB: `flight_app_staging`
 
@@ -185,5 +188,3 @@ I am always open to discussing new projects, creative ideas, or opportunities to
 * **LinkedIn:** [linkedin.com/in/umit-arat](https://www.linkedin.com/in/umit-arat/)
 * **Email:** [umitarat8098@gmail.com](mailto:umitarat8098@gmail.com)
 * **GitHub:** [github.com/umitarat-dev](https://github.com/umitarat-dev) (Current Workspace)
-
-dummy
