@@ -15,11 +15,11 @@ Production-style flight reservation app with token auth, role-based access, staf
 
 <div align="center">
   <h3>
-    <a href="https://umitdev-flight-frontend.onrender.com">🖥️ Live Frontend</a>
+    <a href="https://flight-app-umit.vercel.app/">🖥️ Live Frontend</a>
     |
-    <a href="https://umitdev-flight-backend.onrender.com/swagger/">📘 Swagger</a>
+    <a href="https://flight-app-prod-production.up.railway.app/swagger/">📘 Swagger</a>
     |
-    <a href="https://umitdev-flight-backend.onrender.com/redoc/">📗 Redoc</a>
+    <a href="https://flight-app-prod-production.up.railway.app/redoc/">📗 Redoc</a>
   </h3>
 </div>
 
