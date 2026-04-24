@@ -26,7 +26,7 @@ Production-style flight reservation app with token auth, role-based access, staf
 <!-- GIF PLACEHOLDER: Put your gif file in repo root and update src path -->
 <div align="center">
   <a href="https://flight-app-umit.vercel.app/">
-    <img src="assets/flight-app.gif" alt="flight-app-demo" width="900"/>
+    <img src="assets/flight-app.gif" alt="flight-app-demo" width="700"/>
   </a>
 </div>
 
