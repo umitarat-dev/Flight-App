@@ -24,7 +24,7 @@ Responsive React frontend for flight listing, reservation management, staff flig
 
 <!-- GIF PLACEHOLDER: put your gif inside frontend/ and update file name if needed -->
 <div align="center">
-  <img src="./frontend-demo.gif" alt="flight-frontend-demo" width="900"/>
+  <img src="./frontend-demo.gif" alt="flight-frontend-demo" width="700"/>
 </div>
 
 ## 📚 Navigation
