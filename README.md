@@ -2,6 +2,7 @@
   <img src="https://img.shields.io/badge/Backend-Django%20REST-0C4B33?style=flat&logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/Frontend-React%20(Vite)-61DAFB?style=flat&logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/Database-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Serverless_DB-Neon-00E599?style=flat&logo=neon&logoColor=black" />
   <img src="https://img.shields.io/badge/Container-Docker-2496ED?style=flat&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Hosting-Railway-591DF1?style=flat&logo=railway&logoColor=white" />
   <img src="https://img.shields.io/badge/DB%20Hosting-Neon-00E599?style=flat&logo=postgresql&logoColor=black" />
